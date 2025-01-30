@@ -27,3 +27,70 @@ A smart task management application built with **Node.js**, **Express.js**, **Mo
 ```bash
 git clone https://github.com/your-username/ai-todo-app.git
 cd ai-todo-app
+```
+
+### 2️⃣ Install Dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Configure Environment Variables
+Create a `.env` file in the project root and add:
+```ini
+MONGO_URI=your_mongodb_connection_string
+OPENAI_API_KEY=your_openai_api_key
+PORT=5000
+```
+
+### 4️⃣ Start the Server
+```bash
+npm run dev
+```
+
+---
+
+## 🔥 API Endpoints
+
+### 📌 Task Management
+| Method | Endpoint        | Description |
+|--------|----------------|-------------|
+| `GET`  | `/api/tasks`   | Get all tasks |
+| `POST` | `/api/tasks`   | Add a new task (AI assigns priority) |
+| `PUT`  | `/api/tasks/:id` | Update a task |
+| `DELETE` | `/api/tasks/:id` | Delete a task |
+
+### 📌 AI Features
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/api/tasks/ai/productivity-tip` | Get an AI-generated productivity tip |
+
+---
+
+## 🛠️ Usage Example
+
+### ✅ Adding a New Task
+```bash
+curl -X POST http://localhost:5000/api/tasks \
+     -H "Content-Type: application/json" \
+     -d '{"title": "Submit project", "description": "Final submission due tomorrow."}'
+```
+🔹 **AI will analyze the description and assign priority** (e.g., `"high"`, `"normal"`, `"low"`).
+
+---
+
+## 📜 License
+This project is open-source under the **MIT License**.  
+
+---
+
+## 🎯 Contributing
+Feel free to **fork, submit issues, or create PRs** to improve the project! 🚀  
+If you find this project useful, consider **starring ⭐ the repository**.
+
+---
+
+## 🎉 Contact & Support
+If you have any questions or suggestions, feel free to **open an issue** on GitHub or reach out via email.
+
+Happy coding! 🚀🔥
+```
